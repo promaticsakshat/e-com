@@ -14,6 +14,8 @@ import ProductInfo from './components/ProductInfo.jsx';
 import UserProfile from './pages/UserProfile.jsx';
 import MainLayout from './layouts/MainLayout.jsx';
 import ProfileLayout from './layouts/ProfileLayout.jsx';
+import Login from './pages/LoginPage.jsx';
+import Signup from './pages/SignUpPage.jsx';
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -33,6 +35,8 @@ const router = createBrowserRouter(
       children: [
         { index: true, element: <HomePage /> },
         {path: "product", element: <ProductInfo /> },
+        {path : "login", element: <Login  />},
+        {path : "signup", element: <Signup  />}
       ]
     },
     {
