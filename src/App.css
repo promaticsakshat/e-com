@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+.gradient-2 {
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.12) 0%, transparent 50%),
+    linear-gradient(225deg, #06140d 0%, #064e3b 30%, #022c22 60%, #0f172a 85%, #020617 100%);
+}
+
+.custom-gradient {
+  background-image: linear-gradient(111.1deg, rgba(69,150,164,1) 2.5%, rgba(17,20,34,1) 100.3%);
+}
+
+.curved-bottom {
+  --c: 75; /* curvature control: should be > 50 */
+  position: relative;
+  overflow: hidden;
+  mask: radial-gradient(
+    calc(var(--c) * 1%) 100% at 50% calc(100% + 100% * cos(asin(50 / var(--c)))),
+    #000 calc(100% - 1px),
+    #0000
+  );
+  clip-path: ellipse(calc(var(--c) * 1%) 100% at bottom);
+}
+
+.card-curved-bottom {
+  position: relative;
+  overflow: hidden;
+  clip-path: path("M 0 0 H 100% V calc(100% - 20px) C 25% 100% , 75% 100% , 100% calc(100% - 20px) V 0 Z");
+}
+
+.card-bottom-curve {
+  clip-path: ellipse(150% 100% at 50% -1%);
+  overflow: hidden;
+}
+
+/* .concave-top-convex-bottom {
+  clip-path: polygon(
+    0% 0%, 
+    50% 15%, 
+    100% 0%, 
+    100% 100%, 
+    50% 85%, 
+    0% 100%
+  );
+  padding: 10px 12px;
+  margin-top: 8px;
+  border-radius: 0;
+} */
+
+.concave-both-edges {
+  clip-path: polygon(
+    /* Top concave */
+    0% 0%, 
+    25% 6%, 
+    50% 12%,   /* top dip */
+    75% 6%, 
+    100% 0%,
+
+    /* sides and bottom concave with deeper dip */
+    100% 90%, 
+    75% 98%, 
+    50% 110%,  /* deeper bottom dip — below the container */
+    25% 98%, 
+    0% 90%
+  );
+
+  padding: 12px 16px;
+  overflow: hidden;
+}
+
